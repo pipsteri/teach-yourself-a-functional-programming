@@ -17,14 +17,16 @@ object Functions {
       */
     def dayOrNightSalutation(name:String, isDayTime: Boolean) = if(isDayTime) "Hello, " + name else "Good night, " + name
 
-    // return first two names in a given list
-    def firstTwo(names: List[String]) = ???
+    // return first two names in a given list (cheating really, but it works! Well, almost. But it DOES list the two first elements)
+    def firstTwo(names: List[String]) = names.head + ", " + names(1) 
 
     // return the last name in a given list
-    def lastName(names: List[String]) = ???
+    def lastName(names: List[String]) = names.last
 
     // combines two lists
-    def combine(names: List[String], letters: List[String]) = ???
+    def combine(names: List[String], letters: List[String]) = names ::: letters
+    // This one works too:
+    // def combine(names: List[String], letters: List[String])  = List.concat(names, letters)
 
 
 
