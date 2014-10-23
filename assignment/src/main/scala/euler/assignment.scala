@@ -12,7 +12,7 @@ object ProjectEuler {
    * By considering the terms in the Fibonacci sequence whose values do not
    * exceed four million, find the sum of the even-valued terms.
    */
-  def problem2(): Int = ???
+  def problem2(num:Int): Int = num match { case 0 => 0 case 1 => 1 case _ => problem2(num-1) + problem2(num-2) }
 
   /*
    * Largest palindrome product
@@ -23,6 +23,8 @@ object ProjectEuler {
    * Find the largest palindrome made from the product of two 3-digit numbers.
    *
    */
+     // largest palindrome from two 3-digit numbers:
+  // 993 * 913 = 906609, but how to calculate it with code...
   def problem4(): Int = ???
 
   /*
