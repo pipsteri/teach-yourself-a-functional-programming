@@ -22,14 +22,15 @@ object Functions {
     def characters(str: String):List[Char] = str.toList
 
     // turn a list of strings to a list of list of characters
-    def toCharacterLists(list:List[String]):List[List[Char]] = ???
+    def toCharacterLists(list:List[String]):List[List[Char]] = list map(_.toList)
 
     // turn a list of strings to a list of characters
-    def listOfAllCharacters(list:List[String]):List[Char] = ???
+    def listOfAllCharacters(list:List[String]):List[Char] = list flatMap(_.toList)
 
 
     // return the first string in a list, or if list is empty, return "nada"
-    def firstElementInListOrNada(list:List[String]) = ???
+    // this solution prints out "foo", but tester says it's wrong
+    def firstElementInListOrNada(list:List[String]) = if (list == Nil) {println ("nada")} else println (list.head)
 
     // find the longest string in given list of strings, or "nada" if empty
     // and reverse the result before returning it
