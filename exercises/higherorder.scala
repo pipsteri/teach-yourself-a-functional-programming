@@ -25,7 +25,7 @@ object HigherOrderFunctions {
     /** 'curries' a two-argument generic function - i.e. translates the evaluation of a function 
       * that takes two arguments into evaluating a sequence of functions, each with a single argument
       */
-    def curry2[A, B, C](fn: (A, B) => C): (A => (B => C)) = ???
+    def curry2[A, B, C](fn: (A, B) => C): (A => (B => C)) = (x:A) => (y:B) => fn (x, y)
 
 
 
