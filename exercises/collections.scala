@@ -1,25 +1,25 @@
 object Functions {
 
     // convert a string to upper case, e.g. John => JOHN
-    def upper(s:String) = ???
+    def upper(s:String) = s.toUpperCase()
 
     // convert a list of strings to list of upper case strings
-    def listToUpper(list:List[String]) = ???
+    def listToUpper(list:List[String]) = list.map(_.toUpperCase())
 
 
     // return the length of a string
-    def length(str: String):Int = ???
+    def length(str: String):Int = str.length
 
     // filter names that are less than four characters long
-    def filterShortNames(names:List[String]) = ???
+    def filterShortNames(names:List[String]) = names.filter(_.length > 3)
 
     // filter names that are less than four characters long
     // and turn remaining names to uppercase
-    def filterShortAndTurnToUppercase(names:List[String]) = ???
+    def filterShortAndTurnToUppercase(names:List[String]) = names.filter(_.length > 3).map(_.toUpperCase())
 
 
     // turn a string to a list of characters
-    def characters(str: String):List[Char] = ???
+    def characters(str: String):List[Char] = str.toList
 
     // turn a list of strings to a list of list of characters
     def toCharacterLists(list:List[String]):List[List[Char]] = ???
